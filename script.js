@@ -38,35 +38,6 @@ if (form && statusText) {
       return;
     }
 
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const company = String(formData.get("company") || "").trim();
-    const profile = String(formData.get("profile") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    const subject = `Demande de démonstration MonComptami - ${company}`;
-    const body = [
-      "Bonjour,",
-      "",
-      "Je souhaite réserver une démonstration de MonComptami.",
-      "",
-      `Nom : ${name}`,
-      `Email : ${email}`,
-      `Entreprise : ${company}`,
-      `Profil : ${profile}`,
-      `Créneau préféré : ${selectedSlot}`,
-      "",
-      "Priorité à automatiser :",
-      message || "Non précisée",
-      "",
-      "Merci.",
-    ].join("\n");
-
-    const mailto = new URL("mailto:contact@moncomptami.fr");
-    mailto.searchParams.set("subject", subject);
-    mailto.searchParams.set("body", body);
-
     form.classList.remove("is-sending");
     void form.offsetWidth;
     form.classList.add("is-sending");
@@ -78,14 +49,10 @@ if (form && statusText) {
     statusText.textContent = "";
 
     window.setTimeout(() => {
-      window.location.href = mailto.toString();
-
-      window.setTimeout(() => {
-        form.classList.remove("is-sending");
-        if (submitButton) {
-          submitButton.disabled = false;
-        }
-      }, 700);
-    }, 620);
+      form.classList.remove("is-sending");
+      if (submitButton) {
+        submitButton.disabled = false;
+      }
+    }, 900);
   });
 }
