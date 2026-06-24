@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonComptami - Réservez une démonstration</title>
+    <meta
+      name="description"
+      content="MonComptami automatise les rapprochements, les relances et la préparation des dossiers comptables pour les PME."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" role="img">
+            <path d="M7 5.5h18a2 2 0 0 1 2 2v17a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-17a2 2 0 0 1 2-2Z" />
+            <path d="M10 11h12M10 16h12M10 21h7" />
+          </svg>
+        </span>
+        <span>MonComptami</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" data-nav>
+        <a href="#plateforme">Plateforme</a>
+        <a href="#benefices">Bénéfices</a>
+        <a href="#profils">Pour qui</a>
+        <a href="#demo">Démo</a>
+      </nav>
+    </header>
+
+    <main id="accueil">
+      <section class="hero section-band">
+        <div class="hero-copy">
+          <p class="eyebrow">Bêta privée pour PME et cabinets comptables</p>
+          <h1>Gagnez jusqu'à 10 heures par mois sur votre gestion comptable.</h1>
+          <p class="hero-lead">
+            MonComptami automatise le rapprochement bancaire, connecte vos logiciels de gestion à votre comptabilité et
+            élimine les tâches répétitives qui ralentissent votre entreprise.
+          </p>
+
+          <div class="hero-actions" aria-label="Actions principales">
+            <a class="button button-primary" href="#demo">
+              <span>Demander une démonstration</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#demo">Essayer la bêta gratuitement</a>
+          </div>
+
+          <dl class="proof-strip" aria-label="Promesse MonComptami">
+            <div>
+              <dt>10 h</dt>
+              <dd>gagnées chaque mois</dd>
+            </div>
+            <div>
+              <dt>90 %</dt>
+              <dd>de rapprochements automatisés</dd>
+            </div>
+            <div>
+              <dt>0</dt>
+              <dd>double saisie</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Aperçu de la plateforme MonComptami">
+          <div class="ledger-frame">
+            <div class="ledger-header">
+              <div>
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+                <span class="window-dot"></span>
+              </div>
+              <span>Rapprochement du mois</span>
+            </div>
+            <div class="ledger-summary">
+              <div>
+                <span class="summary-label">Dossier PME</span>
+                <strong>Prêt cabinet</strong>
+              </div>
+              <div class="status-pill">
+                <span></span>
+                Synchronisé
+              </div>
+            </div>
+            <div class="flow-map" aria-hidden="true">
+              <div class="flow-node">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M3 18h18M12 4l8 6H4l8-6Z" />
+                </svg>
+                Banque
+              </div>
+              <div class="flow-line"></div>
+              <div class="flow-node active">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 3h10l3 3v15H7V3Z" />
+                  <path d="M17 3v4h4M10 11h7M10 15h7M10 19h4" />
+                </svg>
+                Factures
+              </div>
+              <div class="flow-line"></div>
+              <div class="flow-node">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v14H4V5Z" />
+                  <path d="M8 9h8M8 13h8M8 17h5" />
+                </svg>
+                Cabinet
+              </div>
+            </div>
+            <div class="ledger-table" role="table" aria-label="Exemple de rapprochements automatisés">
+              <div class="ledger-row ledger-head" role="row">
+                <span role="columnheader">Opération</span>
+                <span role="columnheader">Pièce</span>
+                <span role="columnheader">Statut</span>
+              </div>
+              <div class="ledger-row" role="row">
+                <span role="cell">Virement client ACME</span>
+                <span role="cell">FAC-0421</span>
+                <span class="match" role="cell">Rapproché</span>
+              </div>
+              <div class="ledger-row" role="row">
+                <span role="cell">Prélèvement fournisseur</span>
+                <span role="cell">FNR-118</span>
+                <span class="match" role="cell">Rapproché</span>
+              </div>
+              <div class="ledger-row attention" role="row">
+                <span role="cell">Règlement absent</span>
+                <span role="cell">FAC-0398</span>
+                <span class="alert" role="cell">Relance</span>
+              </div>
+            </div>
+            <div class="ledger-footer">
+              <span>Écritures préparées</span>
+              <strong>34 / 38</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band pain-section" aria-labelledby="pain-title">
+        <div class="section-intro">
+          <p class="eyebrow">Le problème terrain</p>
+          <h2 id="pain-title">Les PME perdent du temps sur des tâches qui n'ajoutent pas de valeur.</h2>
+        </div>
+        <div class="pain-grid">
+          <article>
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 10h16M6 10v8M10 10v8M14 10v8M18 10v8M3 18h18M12 4l8 6H4l8-6Z" />
+              </svg>
+            </span>
+            <h3>Rapprochements bancaires</h3>
+            <p>Identifier à la main les paiements, les factures correspondantes et les écarts de montant.</p>
+          </article>
+          <article>
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 3h10l3 3v15H7V3Z" />
+                <path d="M17 3v4h4M10 11h7M10 15h7M10 19h4" />
+              </svg>
+            </span>
+            <h3>Factures manquantes</h3>
+            <p>Retrouver les pièces, relancer les équipes et préparer un dossier complet pour le cabinet.</p>
+          </article>
+          <article>
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M17 2l4 4-4 4" />
+                <path d="M3 11V9a3 3 0 0 1 3-3h15" />
+                <path d="M7 22l-4-4 4-4" />
+                <path d="M21 13v2a3 3 0 0 1-3 3H3" />
+              </svg>
+            </span>
+            <h3>Doubles saisies</h3>
+            <p>Ressaisir les mêmes informations entre gestion, banque, fichiers Excel et comptabilité.</p>
+          </article>
+          <article>
+            <span class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Z" />
+                <path d="M10 21h4" />
+              </svg>
+            </span>
+            <h3>Relances clients</h3>
+            <p>Repérer les retards de paiement et alerter au bon moment, sans suivi dispersé.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band platform-section" id="plateforme" aria-labelledby="platform-title">
+        <div class="platform-layout">
+          <div class="section-intro align-left">
+            <p class="eyebrow">Une plateforme entre vos outils</p>
+            <h2 id="platform-title">Banque, gestion et comptabilité restent alignées.</h2>
+            <p>
+              MonComptami connecte vos sources, analyse les flux et prépare le travail comptable. L'objectif est simple :
+              faciliter les dossiers et les opérations, pas remplacer les professionnels.
+            </p>
+          </div>
+
+          <div class="connector-board" aria-label="Connexions de la plateforme">
+            <div class="connector-row">
+              <span>Relevés bancaires</span>
+              <strong>Import automatique</strong>
+            </div>
+            <div class="connector-row">
+              <span>Factures clients</span>
+              <strong>Contrôle des règlements</strong>
+            </div>
+            <div class="connector-row">
+              <span>Factures fournisseurs</span>
+              <strong>Détection des pièces</strong>
+            </div>
+            <div class="connector-row">
+              <span>Données de gestion</span>
+              <strong>Synchronisation</strong>
+            </div>
+            <div class="connector-row">
+              <span>Écritures comptables</span>
+              <strong>Préparation cabinet</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band benefit-section" id="benefices" aria-labelledby="benefit-title">
+        <div class="section-intro">
+          <p class="eyebrow">Résultats attendus</p>
+          <h2 id="benefit-title">Moins d'administratif, plus de visibilité.</h2>
+        </div>
+
+        <div class="benefit-grid">
+          <article>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m5 13 4 4L19 7" />
+              </svg>
+            </span>
+            <h3>Clôtures plus rapides</h3>
+            <p>Les opérations sont rapprochées plus tôt et les pièces manquantes sont repérées avant la fin du mois.</p>
+          </article>
+          <article>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m5 13 4 4L19 7" />
+              </svg>
+            </span>
+            <h3>Moins d'erreurs</h3>
+            <p>Les données circulent entre vos outils sans copier-coller ni ressaisie systématique.</p>
+          </article>
+          <article>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m5 13 4 4L19 7" />
+              </svg>
+            </span>
+            <h3>Dossiers mieux préparés</h3>
+            <p>Le cabinet reçoit les informations utiles, les anomalies et les justificatifs à traiter.</p>
+          </article>
+          <article>
+            <span class="check-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m5 13 4 4L19 7" />
+              </svg>
+            </span>
+            <h3>Trésorerie plus lisible</h3>
+            <p>Les retards et encaissements sont suivis dans une vue claire, exploitable par les dirigeants.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band audience-section" id="profils" aria-labelledby="audience-title">
+        <div class="section-intro">
+          <p class="eyebrow">Pour qui ?</p>
+          <h2 id="audience-title">Pensé pour ceux qui préparent, contrôlent et conseillent.</h2>
+        </div>
+        <div class="audience-grid">
+          <article>
+            <div class="audience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+                <path d="M4 21a8 8 0 0 1 16 0" />
+              </svg>
+            </div>
+            <h3>Dirigeants de PME</h3>
+            <p>Retrouvez plusieurs heures par semaine pour développer l'activité plutôt que gérer l'administratif.</p>
+          </article>
+          <article>
+            <div class="audience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 4h14v16H5V4Z" />
+                <path d="M9 8h6M9 12h6M9 16h3" />
+              </svg>
+            </div>
+            <h3>Responsables administratifs</h3>
+            <p>Réduisez les opérations répétitives, sécurisez les données et repérez plus vite les anomalies.</p>
+          </article>
+          <article>
+            <div class="audience-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 20V7l8-4 8 4v13" />
+                <path d="M8 20v-8h8v8M9 8h.01M15 8h.01" />
+              </svg>
+            </div>
+            <h3>Cabinets comptables</h3>
+            <p>Recevez des dossiers clients mieux structurés et consacrez plus de temps au conseil qu'à la saisie.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-band promise-section" aria-labelledby="promise-title">
+        <div class="promise-panel">
+          <div>
+            <p class="eyebrow">Notre promesse</p>
+            <h2 id="promise-title">Une comptabilité plus rapide, sans vendre du rêve.</h2>
+          </div>
+          <p>
+            MonComptami est un outil d'assistance opérationnelle : il rapproche, signale, prépare et synchronise. La
+            décision et le conseil restent entre les mains de l'entreprise et de son cabinet.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-band demo-section" id="demo" aria-labelledby="demo-title">
+        <div class="demo-layout">
+          <div class="demo-copy">
+            <p class="eyebrow">Réserver une démo</p>
+            <h2 id="demo-title">Voyons si MonComptami correspond à votre organisation.</h2>
+            <p>
+              Choisissez un créneau indicatif et laissez vos coordonnées. Le formulaire prépare un email de demande de
+              démonstration avec les informations utiles.
+            </p>
+            <div class="demo-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v18M5 8h14M7 14h10" />
+              </svg>
+              <span>Démo pensée pour les PME, RAF et cabinets qui veulent réduire les tâches manuelles.</span>
+            </div>
+          </div>
+
+          <form class="demo-form" data-demo-form>
+            <div class="field-row">
+              <label>
+                Nom
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Email professionnel
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+            <div class="field-row">
+              <label>
+                Entreprise
+                <input type="text" name="company" autocomplete="organization" required />
+              </label>
+              <label>
+                Profil
+                <select name="profile" required>
+                  <option value="">Sélectionner</option>
+                  <option>Dirigeant de PME</option>
+                  <option>Responsable administratif et financier</option>
+                  <option>Cabinet comptable</option>
+                  <option>Autre</option>
+                </select>
+              </label>
+            </div>
+
+            <fieldset>
+              <legend>Créneau préféré</legend>
+              <div class="slot-grid" data-slot-group>
+                <button type="button" class="slot active" data-slot="Matin">Matin</button>
+                <button type="button" class="slot" data-slot="Début d'après-midi">Début d'après-midi</button>
+                <button type="button" class="slot" data-slot="Fin de journée">Fin de journée</button>
+              </div>
+            </fieldset>
+
+            <label>
+              Priorité à automatiser
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Exemple : rapprochement bancaire, factures manquantes, relances clients..."
+              ></textarea>
+            </label>
+
+            <button class="button button-primary form-submit" type="submit">
+              <span>Demander une démo</span>
+              <svg class="send-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 3 10 14" />
+                <path d="m21 3-7 18-4-7-7-4 18-7Z" />
+              </svg>
+            </button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>MonComptami</strong>
+        <p>La plateforme qui rend du temps aux PME.</p>
+      </div>
+      <a href="mailto:contact@moncomptami.fr">contact@moncomptami.fr</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
