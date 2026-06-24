@@ -14,8 +14,8 @@
   --danger: #8d3f33;
   --shadow: 0 24px 70px rgba(23, 33, 27, 0.13);
   --radius: 8px;
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-body: "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Aptos Display", "Segoe UI", Arial, sans-serif;
+  --font-body: Inter, Aptos, "Segoe UI", Roboto, Arial, sans-serif;
   --font-mono: "Segoe UI Mono", Consolas, monospace;
 }
 
@@ -104,9 +104,9 @@ svg {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 650;
 }
 
@@ -196,19 +196,19 @@ h1,
 h2 {
   max-width: 820px;
   font-family: var(--font-display);
-  font-weight: 520;
-  line-height: 1.04;
+  font-weight: 680;
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
 h1 {
   margin-bottom: 22px;
-  font-size: 4.65rem;
+  font-size: 4.25rem;
 }
 
 h2 {
   margin-bottom: 18px;
-  font-size: 3.55rem;
+  font-size: 3.2rem;
 }
 
 h3 {
@@ -400,8 +400,8 @@ textarea:focus-visible,
 
 .ledger-summary strong {
   font-family: var(--font-display);
-  font-size: 2.55rem;
-  font-weight: 520;
+  font-size: 2.4rem;
+  font-weight: 680;
   line-height: 1;
 }
 
@@ -558,6 +558,7 @@ textarea:focus-visible,
 .pain-section,
 .benefit-section,
 .audience-section,
+.founder-section,
 .demo-section {
   padding: 86px 0;
   border-top: 1px solid var(--line);
@@ -739,6 +740,79 @@ textarea:focus-visible,
   margin-bottom: 0;
   color: rgba(246, 247, 243, 0.74);
   font-size: 1.04rem;
+}
+
+.founder-section {
+  scroll-margin-top: 92px;
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.founder-card {
+  position: sticky;
+  top: 104px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  box-shadow: 0 18px 48px rgba(23, 33, 27, 0.08);
+}
+
+.founder-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 24px;
+  color: var(--paper);
+  background: var(--moss-deep);
+  border-radius: 8px;
+}
+
+.founder-icon svg {
+  width: 27px;
+  height: 27px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.founder-name {
+  margin-bottom: 4px;
+  color: var(--ink);
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.founder-card p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.founder-copy h2 {
+  max-width: 900px;
+}
+
+.founder-text {
+  max-width: 860px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.founder-text p {
+  margin-bottom: 18px;
+}
+
+.founder-mission {
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .demo-layout {
@@ -997,6 +1071,7 @@ fieldset {
   .hero,
   .platform-layout,
   .demo-layout,
+  .founder-layout,
   .promise-panel {
     grid-template-columns: 1fr;
   }
@@ -1007,11 +1082,11 @@ fieldset {
   }
 
   h1 {
-    font-size: 3.85rem;
+    font-size: 3.55rem;
   }
 
   h2 {
-    font-size: 2.95rem;
+    font-size: 2.75rem;
   }
 
   .ledger-summary strong {
@@ -1033,6 +1108,10 @@ fieldset {
   }
 
   .demo-copy {
+    position: static;
+  }
+
+  .founder-card {
     position: static;
   }
 }
@@ -1096,17 +1175,18 @@ fieldset {
   }
 
   h1 {
-    font-size: 3.05rem;
+    font-size: 2.65rem;
   }
 
   h2 {
-    font-size: 2.35rem;
+    font-size: 2.18rem;
   }
 
   .proof-strip,
   .benefit-grid,
   .pain-grid,
   .audience-grid,
+  .founder-layout,
   .field-row {
     grid-template-columns: 1fr;
   }
@@ -1169,6 +1249,7 @@ fieldset {
   .pain-section,
   .benefit-section,
   .audience-section,
+  .founder-section,
   .demo-section,
   .promise-section {
     padding: 64px 0;
@@ -1184,6 +1265,7 @@ fieldset {
   }
 
   .promise-panel,
+  .founder-card,
   .demo-form {
     padding: 22px;
   }
@@ -1219,11 +1301,11 @@ fieldset {
   }
 
   h1 {
-    font-size: 2.58rem;
+    font-size: 2.34rem;
   }
 
   h2 {
-    font-size: 2.05rem;
+    font-size: 1.92rem;
   }
 
   .pain-grid article,
