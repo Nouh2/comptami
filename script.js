@@ -41,6 +41,7 @@ if (form && statusText) {
     form.classList.remove("is-sending");
     void form.offsetWidth;
     form.classList.add("is-sending");
+    statusText.classList.remove("success");
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -53,6 +54,8 @@ if (form && statusText) {
       if (submitButton) {
         submitButton.disabled = false;
       }
+      statusText.textContent = "Votre demande a bien été reçue. Elle sera traitée rapidement par notre équipe.";
+      statusText.classList.add("success");
     }, 900);
   });
 }

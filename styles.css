@@ -5,8 +5,8 @@
   --muted: #5b665f;
   --line: #d8ddd3;
   --line-strong: #bcc6b9;
-  --moss: #344f3d;
-  --moss-deep: #22392d;
+  --moss: #45694f;
+  --moss-deep: #2d4a3a;
   --sage: #dfe6d8;
   --brass: #a77a2d;
   --clay: #84634f;
@@ -959,6 +959,11 @@ fieldset {
   margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.form-status.success {
+  color: var(--moss);
+  font-weight: 760;
 }
 
 .site-footer {
